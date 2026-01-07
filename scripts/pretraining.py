@@ -1,11 +1,13 @@
-import pandas as pd
-import numpy as np
 import os
 os.environ["RDKIT_NUM_THREADS"] = "1"
 os.environ["OMP_NUM_THREADS"]   = "1"
 
-from tqdm.auto import tqdm
+import sys
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
+from tqdm.auto import tqdm
+import pandas as pd
+import numpy as np
 import copy
 import random
 import torch
@@ -19,7 +21,7 @@ from torch_geometric.utils import degree
 from torch_ema import ExponentialMovingAverage
 from rdkit import Chem
 
-from graph_dataset_ogb import OnTheFlyOGBCompatibleSmilesDataset
+from src import OnTheFlyOGBCompatibleSmilesDataset
 # from graph_aug import mask_edges, mask_nodes
 
 def seed_everything(seed):
