@@ -16,7 +16,7 @@
 1.  **Model Architecture**: `PNA (Principal Neighbourhood Aggregation)` 기반의 GNN 모델 사용
 2.  **Self-Supervised Pre-training**:
     * **Dataset**: ZINC (약 2,300만 개)
-    * **Method**: SimCLR 프레임워크를 활용한 Contrastive Learning (Node/Edge Masking Augmentation 적용)
+    * **Method**: Contrastive Learning (Node/Edge Masking Augmentation 적용)
 3.  **External Data Utilization**:
     * PubChem (AID 1851, 884, 885) 데이터를 수집 및 정제하여 학습 데이터 확장
     * Hill Equation 및 Potency 값을 활용하여 Inhibition 값으로 변환
